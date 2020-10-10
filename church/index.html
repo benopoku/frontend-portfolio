@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"></a>
+      <img src="https://scontent.facc6-1.fna.fbcdn.net/v/t1.0-9/22729172_367556463700397_6755170416359930926_n.png?_nc_cat=100&_nc_sid=09cbfe&_nc_eui2=AeGmtSnVIWYEM1KrA68G-q7BKHbdsgQId8codt2yBAh3x68ypgBCZo-VXlbXTXOUX5Oatga1NIao2O7WfGRF7Sa7&_nc_ohc=jT1BRk-XFoAAX9HAmOg&_nc_ht=scontent.facc6-1.fna&oh=b1beb203fe4ce3ee6bb26a31dee418d3&oe=5FA39C91" width="65" height="65">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#band">BAND</a></li>
+        <li><a href="#tour">TOUR</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="https://i1.wp.com/www.perezchapel.org/wp-content/uploads/2014/12/congregation.jpg?w=900&ssl=1" alt="Accra" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Perez Chapel</h3>
+          <p>Accra Cathedral.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="https://i0.wp.com/www.perezchapel.org/wp-content/uploads/2016/02/FB_IMG_1455489634546.jpg?fit=1088%2C600&ssl=1" alt="Pakistan" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Pakistan</h3>
+          <p>Evangilism - A night we won't forget.</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="https://perezchapel.podbean.com/mf/web/7c429k/home_hero.jpg" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Tema</h3>
+          <p>National Conference</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+  <h3>THE CHURCH</h3>
+  <p><em>We love music!</em></p>
+  <p>Breaking Forth, Transforming Generations.
+The Perez Chapel International has a Pentecostal and Charismatic orientation and believes in the totality of the Bible.
+The Perez Chapel International, formerly known as the Word Miracle Church International started in Tamale, Northern Ghana on 29th March 1987.“The Church has its headquarters in Dzorwulu, Accra. The Church currently has 530 branches in 22 countries. The Perez Dome a 14,000 seater auditorium regarded as the largest auditorium in Ghana, is the leading branch of P.C.I. The senior pastors of the Dome are Bishop Charles and Rev Mrs Vivian Agyinasare.</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Bishop Charlse Agyinasare</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="https://scontent.facc6-1.fna.fbcdn.net/v/t1.0-9/120932306_10158576286804337_1985713521194392988_o.jpg?_nc_cat=111&_nc_sid=730e14&_nc_eui2=AeFsVwgUtfS7-ldxZxzzytUk0wRhrPYVeOrTBGGs9hV46szDk95cBK5o_LfJY9Ji7fXxGbSePFz1UeJUrPWiEp8d&_nc_ohc=XMtY6Ggro-4AX_KoR_7&_nc_ht=scontent.facc6-1.fna&oh=67c918707f78471cf5c25f374dddbcff&oe=5FA487BC" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>General Overseer</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Rev. Mrs. vivian Agyinasare</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="https://scontent.facc6-1.fna.fbcdn.net/v/t1.0-9/118293708_1026132027842834_2809930618764053215_n.jpg?_nc_cat=104&_nc_sid=8bfeb9&_nc_eui2=AeEii7VApjo0EBKA5XjaBAnk_Qu1tS9SLMb9C7W1L1IsxgqZlRVU3yugkgjNtPWYRP9mYuZBenku7ybNtfbRL0Wv&_nc_ohc=7Cq8MggCQFgAX-I3EZa&_nc_ht=scontent.facc6-1.fna&oh=33a42a60d9d24cb2459a21f4da0948ab&oe=5FA28F86" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Wife</p>
+        <p>Loves Children</p>
+        <p>Member since 1989</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Mr. Bernard Agyinasare</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="https://scontent.facc6-1.fna.fbcdn.net/v/t1.0-9/61750647_438251630302572_2948635292271116288_n.jpg?_nc_cat=100&_nc_sid=730e14&_nc_eui2=AeEAelwuOapUT48Z3hy-9k-pDEzdVXZ6U44MTN1VdnpTjilMj_Akb18rkocUEUGbGzbybAy5lysko72klbfeDGwE&_nc_ohc=UIRAYvlOQfkAX_f2duP&_nc_ht=scontent.facc6-1.fna&oh=ec45df745228c9621272f38501eaddb2&oe=5FA38387" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>Asistance Head Pastor</p>
+        <p>Loves music</p>
+        <p>Member since 2006</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">BRANCHES</h3>
+    <p class="text-center">We have 3 brances in Accra<br> Remember to visit any branches of choice!</p>
+    <ul class="list-group">
+      <li class="list-group-item">Amasaman <span class="label label-danger">Open from Monday - Sunday</span></li>
+      <li class="list-group-item">Pokuase <span class="label label-danger">Open from Tuesday - Sunday</span></li> 
+      <li class="list-group-item">Nsawam <span class="badge">Open from Wednesday - Sunday</span></li> 
+    </ul>
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="https://i0.wp.com/www.perezchapel.org/wp-content/uploads/2014/12/sequence01.jpg?w=1024&ssl=1" alt="Amasaman" width="400" height="300">
+          <p><strong>Amasaman Branch</strong></p>
+          <p>Open from Monday - Sunday</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Vist us anytime!</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="https://i1.wp.com/www.perezchapel.org/wp-content/uploads/2014/12/sequence04.jpg?w=1024&ssl=1" alt="New York" width="400" height="300">
+          <p><strong>Pokuase Branch</strong></p>
+          <p>Open from Tuesday - Sunday</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Vist us anytime!</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="https://i1.wp.com/www.perezchapel.org/wp-content/uploads/2014/12/sequence06.jpg?w=1024&ssl=1" alt="San Francisco" width="400" height="300">
+          <p><strong>Nsawam</strong></p>
+          <p>Open from Wednesday - Sunday</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Vist us anytime!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Branch Contact</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Contact</label>
+              <input type="number" class="form-control" id="psw" placeholder="What do you have for us?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Submit 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>We love our Newcommers!</em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>You can share your thoughts!</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>105 Olusegun Obasanjo Way, Dzorwulu Junction Accra, Ghana</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +233(0302)776002, +233(0302)764898</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: connect@perezchapel.org</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3 class="text-center">From The Blog</h3>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Charlse</a></li>
+    <li><a data-toggle="tab" href="#menu1">Vivian</a></li>
+    <li><a data-toggle="tab" href="#menu2">Peter</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Bishop Charlse Agyinasare, General Overseer</h2>
+      <p>Vist us, and your life won't be the same.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Rev. Mrs. Vivian Agyinasare</h2>
+      <p>It always good to be in the house of the Lord!</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Peter Mensah, Senior Usher</h2>
+      <p>Perez chapel welcomes you anytime, our doors are open to everyone!.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="map.jpg" class="img-responsive" style="width:100%">
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
